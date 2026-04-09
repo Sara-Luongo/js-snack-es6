@@ -31,15 +31,10 @@ function getRandomInt(min, max) {
 }
 
 for (let i = 0; i < squadreCalcio.length; i++) {
-    let datiFalliTemp = squadreCalcio[i].punti
-    datiFalliTemp = getRandomInt(1, 50)
-    nomiFalli.push(datiFalliTemp)
-
+    const datiSquadra = {
+        nome: squadreCalcio[i].nome,
+        falliSubiti: getRandomInt(1, 50)
+    }
+    nomiFalli.push(datiSquadra)
 }
-
-for (let i = 0; i < squadreCalcio.length; i++) {
-    const nomiSquadre = squadreCalcio[i].nome
-    nomiFalli.push(nomiSquadre)
-}
-
 console.log(nomiFalli)
